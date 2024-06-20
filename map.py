@@ -80,7 +80,7 @@ if menu == "Category-Specific Dashboard":
     st.subheader(f"Heatmap for Total Quantity Sold in Each State")
     state_quantity = category_df.groupby('state_id').agg({'Quantity': 'sum'}).reset_index()
     m = folium.Map(location=[23.47, 77.94], tiles='CartoDB positron', zoom_start=5, attr="My Data attribution")
-    geojson_path = r"C:\Users\vaibh\OneDrive\Desktop\final project\india_telengana.geojson"
+    geojson_path = r"india_telengana.geojson"
 
     # Create a dictionary to map state_id to quantity
     quantity_dict = state_quantity.set_index('state_id')['Quantity'].to_dict()
