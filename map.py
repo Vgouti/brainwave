@@ -14,7 +14,7 @@ import altair as alt
 
 @st.cache_data
 def load_data():
-    train_df = pd.read_csv(r'C:\Users\vaibh\OneDrive\Desktop\final project\stateidmixed.csv')
+    train_df = pd.read_csv(r'stateidmixed.csv')
     testing_df = pd.read_csv(r"trends.csv")
     return train_df, testing_df
 
