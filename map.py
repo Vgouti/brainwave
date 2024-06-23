@@ -67,11 +67,11 @@ if menu == "Basic Dashboard":
                      hover_data={'Quantity': True})
     st.plotly_chart(fig_pie)
     
-    st.subheader("Revenue from Each Category Bar Chart")
-    train_df['Revenue'] = train_df['actual_price'] * train_df['Quantity']
-    fig_bar_revenue = px.bar(train_df, x='categories', y='Revenue', title='Total Revenue by Category',
-                            hover_data={'Revenue': True, 'categories': False})
-    st.plotly_chart(fig_bar_revenue)
+    #st.subheader("Revenue from Each Category Bar Chart")
+    #train_df['Revenue'] = train_df['actual_price'] * train_df['Quantity']
+    #fig_bar_revenue = px.bar(train_df, x='categories', y='Revenue', title='Total Revenue by Category',
+    #                        hover_data={'Revenue': True, 'categories': False})
+    #st.plotly_chart(fig_bar_revenue)
 
 if menu == "Category-Specific Dashboard":
     selected_category = st.sidebar.selectbox("Select Category", train_df['categories'].unique())
